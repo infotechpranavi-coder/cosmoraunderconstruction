@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cosmoara — Store under construction</title>
+  <meta name="description" content="The Cosmoara online store is under construction. Shop beauty, grooming, and wellness products soon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #111a29;
+      --ink: #1c2636;
+      --muted: #5c6778;
+      --line: #d7dee8;
+      --paper: #f5f7fa;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Outfit", sans-serif;
+      background:
+        radial-gradient(720px 360px at 50% 0%, rgba(17, 26, 41, 0.05), transparent 70%),
+        var(--paper);
+      display: grid;
+      place-items: center;
+    }
+
+    main {
+      width: min(720px, calc(100% - 40px));
+      text-align: center;
+      padding: 48px 8px 40px;
+    }
+
+    .logo {
+      display: block;
+      width: min(560px, 100%);
+      height: auto;
+      margin: 0 auto 8px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    h1 {
+      margin: 0 auto 14px;
+      max-width: 16ch;
+      font-weight: 500;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+    }
+
+    p {
+      margin: 0 auto;
+      max-width: 46ch;
+      color: var(--muted);
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 32px;
+      padding: 10px 16px 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #c45c4a;
+      box-shadow: 0 0 0 0 rgba(196, 92, 74, 0.45);
+      animation: pulse 2.4s ease-out infinite;
+    }
+
+    .bar {
+      width: min(220px, 70%);
+      height: 2px;
+      margin: 28px auto 0;
+      border-radius: 999px;
+      background: var(--line);
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      width: 42%;
+      border-radius: inherit;
+      background: var(--navy);
+      animation: fill 2.8s ease-in-out infinite;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #8b95a5;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+
+    @keyframes pulse {
+      70% { box-shadow: 0 0 0 8px rgba(196, 92, 74, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(196, 92, 74, 0); }
+    }
+
+    @keyframes fill {
+      0% { transform: translateX(-120%); }
+      100% { transform: translateX(320%); }
+    }
+
+    @media (max-width: 420px) {
+      .eyebrow {
+        letter-spacing: 0.16em;
+        font-size: 11px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .dot, .bar span { animation: none; }
+      .bar span { transform: none; width: 55%; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="image.png" alt="Cosmoara">
+    <p class="eyebrow">Online store</p>
+    <h1>Our shop is<br>under construction.</h1>
+    <p>The Cosmoara ecommerce store for beauty, grooming, and wellness is being built. You’ll be able to browse and buy online soon.</p>
+
+    <div class="status">
+      <span class="dot" aria-hidden="true"></span>
+      Under construction
+    </div>
+    <div class="bar" role="presentation"><span></span></div>
+
+    <footer>Shop opening soon</footer>
+  </main>
+</body>
+</html>
